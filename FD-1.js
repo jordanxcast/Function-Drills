@@ -1,6 +1,6 @@
 // eslint-disable-next-line strict
-function createGreeting {
-  return `Hi, my name is Jordan and I'm 23 years old`;
+function createGreeting(name, age) {
+  return `Hi, my name is ${name} and I'm ${age} years old`;
 }
 
 const greeting1 = createGreeting();
