@@ -1,14 +1,23 @@
 // eslint-disable-next-line strict
-function createGreeting(name, age) {
-  return `Hi, my name is ${name} and I'm ${age} years old`;
-}
-
 function getYearOfBirth(age){
-  const yearOf = 2019 - age;
-  return `I was born in ${yearOf}`;
+  return 2019 - age;
 }
 
-const greeting1 = createGreeting();
-// eslint-disable-next-line no-console
-console.log(greeting1);
+function createGreeting(name, age) {
+  const yearOfBirth = getYearOfBirth(age);
+  return `Hi, my name is ${name} and I'm ${age} years old. I was born in ${yearOfBirth}.`;
+}
 
+function yearOfBirth(age){
+  if (age < 0){
+    throw new Error('Age cannot be negative.');
+  }
+}
+
+try {
+  const greeting1 = createGreeting('Jordan', 23);
+  // eslint-disable-next-line no-console
+  console.log(greeting1);
+} catch {
+
+}
