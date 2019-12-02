@@ -19,7 +19,7 @@ function yearOfBirth(age){
   if (typeof name !== 'string'){
     throw new TypeError('Name must be a string!');
   }
-  if (&& typeof age !== 'number'){
+  if (typeof age !== 'number'){
     throw new TypeError('Age must be a number!');
   }
 }
