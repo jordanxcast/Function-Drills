@@ -64,68 +64,35 @@ console.log(decodeResult);
 
 //Drill #4 - How many days in a month
 function daysInMonth(month, leapYear) {
-  let numOfDays = 0;
   switch (month) {
   case 'January':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
+	case 'March':
+	case 'May':
+	case 'July':
+	case 'August':
+	case 'October':
+	case 'December':
+    return `${month} has 31 days.`;
+		break;
   case 'February':
-    if (leapYear === true) {
-      numOfDays = 29;
-      return `${month} has ${numOfDays} days.`;
-    } else if (leapYear === false) {
-      numOfDays = 28;
-      return `${month} has ${numOfDays} days.`;
+    if (leapYear) {
+      return `${month} has 29 days.`;
+    } else if (!leapYear) {
+      return `${month} has 28 days.`;
     }
     break;
-
-  case 'March':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
   case 'April':
-    numOfDays = 30;
-    return `${month} has ${numOfDays} days.`;
-
-  case 'May':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
   case 'June':
-    numOfDays = 30;
-    return `${month} has ${numOfDays} days.`;
-
-  case 'July':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
-  case 'August':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
   case 'September':
-    numOfDays = 30;
-    return `${month} has ${numOfDays} days.`;
-
-  case 'October':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
   case 'November':
-    numOfDays = 30;
-    return `${month} has ${numOfDays} days.`;
-
-  case 'December':
-    numOfDays = 31;
-    return `${month} has ${numOfDays} days.`;
-
+    return `${month} has 30 days.`;
+		break;
   default:
     return 'Must provide a valid month.';
   }
 }
 
-const numOfDaysResult = daysInMonth('January');
+const numOfDaysResult = daysInMonth('February', true);
 console.log(numOfDaysResult);
 
 //Drill #5 - Rock Paper Scissors
