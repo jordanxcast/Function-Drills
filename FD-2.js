@@ -1,5 +1,4 @@
-//Drill #1 
-
+//Drill #1 - Jedi name
 //create a function called jediName
 // eslint-disable-next-line strict
 function jediName(firstName, lastName){
@@ -15,7 +14,7 @@ const jediNameFinal = jediName('Jordan', 'Castillo');
 // eslint-disable-next-line no-console
 console.log(jediNameFinal);
 
-//Drill #2
+//Drill #2 - Beyond
 // create a function called beyond 
 function beyond(num){
   //if the number is infinite, log out 'And beyond'
@@ -38,3 +37,30 @@ function beyond(num){
 
 const beyondResult = beyond(0);
 console.log(beyondResult);
+
+//Drill #3 - Cracking the code
+function decode(str){
+  //create a variable that gets the first letter of the string 
+  let firstLetter = str.charAt(0);
+  //if the first letter is a, b, c, or d return the decoded letter 
+  if (firstLetter === "a"){
+    return str.charAt(1);
+  } 
+  if (firstLetter === "b"){
+    return str.charAt(2);
+  } 
+  if (firstLetter === "c"){
+    return str.charAt(3);
+  } 
+  if (firstLetter === "d"){
+    return str.charAt(4);
+  } 
+  else {
+    return ' ';
+  }
+}
+
+const decodeResult = decode('cycle');
+console.log(decodeResult);
+
+
