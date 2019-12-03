@@ -131,8 +131,31 @@ console.log(numOfDaysResult);
 //Drill #5 - Rock Paper Scissors
 function rockPaper(num){
   const randomNo = Math.floor(Math.random() * 3) + 1;
+  //if both numbers are the same its a tie
+  if (num === randomNo){
+    return 'Tie! Try Again.';
+  }
+  //if the number inputted is not between 1 and 3, error
+  if (num < 1 || num > 3 || typeof num !== 'number'){
+    throw new Error('You must enter a number between 1 and 3');
+  }
   //rock is equal to 1 
-  if (num )
   //paper is equal to 2
   //scissors is equal to 3 
+  if (num === 1 && randomNo === 2){
+    return 'You loose. Paper beats Rock!';
+  } if (num === 1 && randomNo === 3){
+    return 'You Win! Rock beats Scissors.';
+  } if (num === 3 && randomNo === 2){
+    return 'You win! Scissors beats Paper.';
+  } if (num === 3 && randomNo === 1){
+    return 'You lose. Rock beats Scissors!';
+  } if (num === 2 && randomNo === 1){
+    return 'You win! Paper beats Rock.';
+  } if (num === 2 && randomNo === 3){
+    return 'You lose. Scissors beats Paper!';
+  }
 }
+
+let gameResult = rockPaper(2);
+console.log(gameResult);
